@@ -9,12 +9,14 @@ sap.ui.define([
 
 	return Controller.extend("ui5.walkthrough.controller.InvoiceList", {
 		formatter: formatter,
+
 		onInit() {
 			const oViewModel = new JSONModel({
 				currency: "EUR"
 			});
 			this.getView().setModel(oViewModel, "view");
 		},
+
 		onFilterInvoices(oEvent) {
 			// build filter array
 			const aFilter = [];
